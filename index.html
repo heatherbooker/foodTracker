@@ -1,15 +1,23 @@
 <html>
 
 	<body>
-
-		1. select type of food??<br>
-		2. enter item 1 (as object with attributes incl. cost) (push to array)<br>
-		3. enter item 2 (push to array)(and so on until all desired items are entered)<br>
-		4. calculate total cost<br>
-		5. display image/list of food/prices
-		<!-- <canvas id="mycanvas" width="500" height="300" style="border:1px solid black">
-		</canvas> -->
+		<div>
+			1. select type of food??<br>
+			2. enter item 1 (as object with attributes incl. cost) (push to array)<br>
+			3. enter item 2 (push to array)(and so on until all desired items are entered)<br>
+			4. calculate total cost<br>
+			5. display image/list of food/prices
+		</div>
 		
+		<div style='padding-top:10px'>
+			<input type="text" id="foodName" placeholder="Name of Food">
+			<input type="number" id="foodPrice" step="0.01" min="0">
+		</div>
+
+		<div style='padding-top:10px'>
+			<button onclick="getInfo()">Add to Order</button>
+		</div>
+
 	</body>
 	<script src="script.js"></script>
 
