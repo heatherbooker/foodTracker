@@ -10,8 +10,38 @@ console.log(aFood);
 myOrder.push(aFood);
 console.log(myOrder);
 
-function getInfo() {
-    var name = document.getElementById('foodName').value;
-    var cost = document.getElementById('foodPrice').value;
-    console.log(name, cost);
-}
+
+$(document).ready(function() {
+
+    $('.saladMenu').click(function() {
+        var aSalad = new Food('salad', 4);
+        console.log(aSalad);
+        $('#saladMenu').show();
+    });
+
+    $('.sandwichMenu').click(function() {
+        var aSammie = new Food('sandwich', 4);
+        $('#sandwichMenu').show();
+    });
+
+    $('.soupMenu').click(function() {
+        var aSoup = new Food('soup', 3);
+        $('#soupMenu').show();
+    });
+
+    $('.sweetMenu').click(function() {
+        var aSweet = new Food('sweet', 4);
+        $('#sweetMenu').show();
+    });
+
+    $('.steakMenu').click(function() {
+        var aSteak = new Food('steak', 4);
+        $('#steakMenu').show();
+    });
+
+    $('.stewMenu').click(function() {
+        var aStew = new Food('stew', 4);
+        $('#stewMenu').show();
+    });
+
+});

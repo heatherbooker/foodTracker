@@ -4,7 +4,6 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="stylePages.css">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
 	</head>
 
 	<body>
@@ -13,16 +12,16 @@
 
 			<div class="jumbotron">
 				<h1>VEGAN</h1>
+				<a href="index.html" id="backText"><button id="back" class="btn btn-info">BACK</button></a>
 			</div>
 
 			<div class="row">
 				<div class="col-md-2">
 				</div>
 
-				<div class="col-md-2">
-				<img style="width:150px" src="http://images.clipartpanda.com/salad-clip-art-KTnaEzqTq.png">
-				<h3>SALADS</h3>
-				<select title="Salad Stuffs">
+				<div class="col-md-2"><img class="saladMenu" src="http://images.clipartpanda.com/salad-clip-art-KTnaEzqTq.png">
+				<h3 class="saladMenu">SALADS</h3>
+				<select title="Salad Stuffs" id="saladMenu">
 				<option disabled selected>Salad Stuffs</option>
 				<optgroup label="Greens">
 					<option>Lettuce</option>
@@ -43,9 +42,9 @@
 				</div>
 
 				<div class="col-md-2">
-				<img src="https://rfclipart.com/image/big/74-78-8a/cheese-sandwich-Download-Royalty-free-Vector-File-EPS-51921.jpg">
-				<h3>SANDWICHES</h3>
-				<select title="Sandwich Stuffins">
+				<img class="sandwichMenu" src="https://rfclipart.com/image/big/74-78-8a/cheese-sandwich-Download-Royalty-free-Vector-File-EPS-51921.jpg">
+				<h3 class="sandwichMenu">SANDWICHES</h3>
+				<select title="Sandwich Stuffins" id="sandwichMenu">
 				<option disabled selected>Sandwich Stuffins</option>
 				<optgroup label="Spreads">
 					<option>Hummus</option>
@@ -66,9 +65,9 @@
 				</div>
 
 				<div class="col-md-2">
-				<img src="http://www.foodsoftware.com/graphics/Products/Fall_Winter_Food_CD/Harvest_Vegetable_Soup.jpg">
-				<h3>SOUPS</h3>
-				<select title="Soup Styles">
+				<img class="soupMenu" src="http://www.foodsoftware.com/graphics/Products/Fall_Winter_Food_CD/Harvest_Vegetable_Soup.jpg">
+				<h3 class="soupMenu">SOUPS</h3>
+				<select id="soupMenu" title="Soup Styles">
 				<option disabled selected>Soup Styles</option>
 				<optgroup label="Bases">
 					<option>Potato</option>
@@ -89,9 +88,9 @@
 				</div>
 
 				<div class="col-md-2">
-				<img src="http://l.thumbs.canstockphoto.com/canstock4683402.jpg">
-				<h3> SWEETS</h3>
-				<select title="Sweet Snacks">
+				<img class="sweetMenu" src="http://l.thumbs.canstockphoto.com/canstock4683402.jpg">
+				<h3 class="sweetMenu"> SWEETS</h3>
+				<select title="Sweet Snacks" id="sweetMenu">
 				<option disabled selected>Sweet Snacks</option>
 				<optgroup label="Bases">
 					<option>Cashew Crust</option>
@@ -120,9 +119,8 @@
 		</div>
 	</body>
 
-	<script type="text/javascript">alert('BAGOO! I need help with these drop down menus...');
-alert('I tried to use some plugin but I couldn\'t get it to work...');
-alert('sad face :( \n Here\'s the source: http://silviomoreto.github.io/bootstrap-select/');</script>
+	<script type="text/javascript">
+//alert('sad face :( \n Here\'s the source: http://silviomoreto.github.io/bootstrap-select/');</script>
 	<script src="script.js"></script>
 
 </html>
