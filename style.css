@@ -1,0 +1,31 @@
+html,
+#mainPage { 
+	background: -webkit-linear-gradient(left, #3AE728, #F12828); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(right, #3AE728, #F12828); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right, #3AE728, #F12828); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to right, #3AE728, #F12828); /* Standard syntax */
+}
+h1 {
+	text-align: center;
+	position: relative;
+	top: 2em;
+	font-size: 70pt;
+}
+li {
+	display: inline;
+}
+#li1:hover,
+#li2:hover {
+	color: white;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+a:hover {
+	color: white;
+}
+a:link:hover {
+	text-decoration: none;
+	color: white;
+}
