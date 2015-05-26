@@ -6,42 +6,113 @@ function Food(itemName, itemPrice) {
 }
 
 var aFood = new Food('grapes', 10)
-console.log(aFood);
 myOrder.push(aFood);
-console.log(myOrder);
 
 
 $(document).ready(function() {
 
-    $('.saladMenu').click(function() {
+    var hasSalad = false;
+    var hasSandwich = false;
+    var hasSoup = false;
+    var hasSweet = false;
+    var hasSteak = false;
+    var hasStew = false;
+
+    $('#salad').click(function() {
         var aSalad = new Food('salad', 4);
-        console.log(aSalad);
-        $('#saladMenu').show();
+        $('.saladBar').show();
+        hasSalad = true;
     });
 
-    $('.sandwichMenu').click(function() {
+    $('#sandwich').click(function() {
         var aSammie = new Food('sandwich', 4);
-        $('#sandwichMenu').show();
+        $('.sandwichBar').show();
+        hasSandwich = true;
     });
 
-    $('.soupMenu').click(function() {
+    $('#soup').click(function() {
         var aSoup = new Food('soup', 3);
-        $('#soupMenu').show();
+        $('.soupBar').show();
+        hasSoup = true;
     });
 
-    $('.sweetMenu').click(function() {
+    $('#sweet').click(function() {
         var aSweet = new Food('sweet', 4);
-        $('#sweetMenu').show();
+        $('.sweetBar').show();
+        hasSweet = true;
     });
 
-    $('.steakMenu').click(function() {
+    $('#steak').click(function() {
         var aSteak = new Food('steak', 4);
-        $('#steakMenu').show();
+        $('.steakBar').show();
+        hasSteak = true;
     });
 
-    $('.stewMenu').click(function() {
+    $('#stew').click(function() {
         var aStew = new Food('stew', 4);
-        $('#stewMenu').show();
+        $('.stewBar').show();
+        hasStew = true;
+    });
+
+    $('#submit').click(function() {
+
+        $('#receipt').show();
+
+        if (hasSalad) {
+            $(addFoodCategory('Salad:'));
+            var saladChoices = $('#SALAD').val();
+            $(makeFoodList(saladChoices));
+        };
+        if (hasSteak) {
+            $(addFoodCategory('Steak:'));
+            var steakChoices = $('#STEAK').val();
+            $(makeFoodList(steakChoices));
+        };
+        if (hasSandwich) {
+            $('#receipt').css('height', '400px');
+            $(addFoodCategory('Sandwich:'));
+            var sandwichChoices = $('#SANDWICH').val();
+            $(makeFoodList(sandwichChoices));
+        };
+        if (hasSoup) {
+            $('#receipt').css('height', '530px');
+            $(addFoodCategory('Soup:'));
+            var soupChoices = $('#SOUP').val();
+            $(makeFoodList(soupChoices));
+        };
+        if (hasStew) {
+            $('#receipt').css('height', '700px');
+            $(addFoodCategory('Stew:'));
+            var stewChoices = $('#STEW').val();
+            $(makeFoodList(stewChoices));
+        };
+        if (hasSweet) {
+            $('#receipt').css('height', '620px');
+            $(addFoodCategory('Sweet:'));
+            var sweetChoices = $('#SWEET').val();
+            $(makeFoodList(sweetChoices));
+        };
+        $(printReceipt);
     });
 
 });
+
+var foodList = "";
+
+function addFoodCategory(category) {
+    if (foodList === "") {
+        foodList = '<strong>' + category + '</strong><br>';
+    } else {
+        foodList += '<br><strong>' + category + '</strong><br>';
+    }
+}
+
+function makeFoodList(arrayOfFoods) {
+    var foodChoices = arrayOfFoods.join('<br>');
+    foodList += foodChoices;
+    console.log(foodList);
+}
+
+function printReceipt() {
+    document.getElementById('receipt').innerHTML = foodList;
+}

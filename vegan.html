@@ -3,7 +3,10 @@
 	<head>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="stylePages.css">
+		<link rel="stylesheet" type="text/css" href="dist/css/bootstrap-select.css">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="dist/js/bootstrap-select.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	</head>
 
 	<body>
@@ -19,10 +22,10 @@
 				<div class="col-md-2">
 				</div>
 
-				<div class="col-md-2"><img class="saladMenu" src="http://images.clipartpanda.com/salad-clip-art-KTnaEzqTq.png">
-				<h3 class="saladMenu">SALADS</h3>
-				<select title="Salad Stuffs" id="saladMenu">
-				<option disabled selected>Salad Stuffs</option>
+				<div class="col-md-2"><div id="salad"><img src="http://images.clipartpanda.com/salad-clip-art-KTnaEzqTq.png">
+				<h3>SALADS</h3></div>
+				<div class="saladBar">
+				<select title="Salad Stuffs" multiple class="selectpicker" id="SALAD">
 				<optgroup label="Greens">
 					<option>Lettuce</option>
 					<option>Spinach</option>
@@ -40,12 +43,14 @@
 				</optgroup>
 				</select>
 				</div>
+				</div>
 
 				<div class="col-md-2">
-				<img class="sandwichMenu" src="https://rfclipart.com/image/big/74-78-8a/cheese-sandwich-Download-Royalty-free-Vector-File-EPS-51921.jpg">
-				<h3 class="sandwichMenu">SANDWICHES</h3>
-				<select title="Sandwich Stuffins" id="sandwichMenu">
-				<option disabled selected>Sandwich Stuffins</option>
+				<div id="sandwich">
+				<img src="https://rfclipart.com/image/big/74-78-8a/cheese-sandwich-Download-Royalty-free-Vector-File-EPS-51921.jpg">
+				<h3 >SANDWICHES</h3></div>
+				<div class="sandwichBar">
+				<select class="selectpicker" id="SANDWICH" multiple title="Sandwich Stuffins">
 				<optgroup label="Spreads">
 					<option>Hummus</option>
 					<option>Red Pepper Spread</option>
@@ -63,12 +68,14 @@
 				</optgroup>
 				</select>
 				</div>
+				</div>
 
 				<div class="col-md-2">
-				<img class="soupMenu" src="http://www.foodsoftware.com/graphics/Products/Fall_Winter_Food_CD/Harvest_Vegetable_Soup.jpg">
-				<h3 class="soupMenu">SOUPS</h3>
-				<select id="soupMenu" title="Soup Styles">
-				<option disabled selected>Soup Styles</option>
+				<div id="soup">
+				<img src="http://www.foodsoftware.com/graphics/Products/Fall_Winter_Food_CD/Harvest_Vegetable_Soup.jpg">
+				<h3>SOUPS</h3></div>
+				<div class="soupBar">
+				<select multiple class="selectpicker" id="SOUP" title="Soup Styles">
 				<optgroup label="Bases">
 					<option>Potato</option>
 					<option>Broth</option>
@@ -86,12 +93,14 @@
 				</optgroup>
 				</select>
 				</div>
+				</div>
 
 				<div class="col-md-2">
-				<img class="sweetMenu" src="http://l.thumbs.canstockphoto.com/canstock4683402.jpg">
-				<h3 class="sweetMenu"> SWEETS</h3>
-				<select title="Sweet Snacks" id="sweetMenu">
-				<option disabled selected>Sweet Snacks</option>
+				<div id="sweet">
+				<img src="http://l.thumbs.canstockphoto.com/canstock4683402.jpg">
+				<h3>SWEETS</h3></div>
+				<div class="sweetBar">
+				<select title="Sweet Snacks" id="SWEET" class="selectpicker" multiple>
 				<optgroup label="Bases">
 					<option>Cashew Crust</option>
 					<option>Chia Pudding</option>
@@ -109,18 +118,29 @@
 				</optgroup>
 				</select>
 				</div>
+				</div>
 
-				<div class="col-md-2">
+				<div class="col-md-2" id="receipt">
 				</div>
 			</div>			
+			<div class="row">
+				<div class="col-md-4">
+				</div>
+				<div class="col-md-4">
+					<button id="submit" class="btn btn-default">SUBMIT ORDER</button>
+				</div>
+				<div class="col-md-4">
+				</div>
+			</div>
 
 			<div id="footer">
 			</div>
 		</div>
 	</body>
 
-	<script type="text/javascript">
-//alert('sad face :( \n Here\'s the source: http://silviomoreto.github.io/bootstrap-select/');</script>
+	
 	<script src="script.js"></script>
 
 </html>
+
+

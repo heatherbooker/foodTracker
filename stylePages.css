@@ -34,17 +34,38 @@ h3 {
 	text-align: center;
 	padding-right: 40px;
 }
-select {
+#receipt {
+	border-radius: 4px;
+	border: solid black 2px;
+	height: 250px;
+	position: relative;
+	right: 20px;
+}
+.saladBar,
+.sandwichBar,
+.soupBar,
+.sweetBar,
+.steakBar,
+.stewBar,
+#receipt {
 	display: none;
 }
-#footer {
-	height: 20px;
+#submit {
+	font-size: 22pt;
+	margin-top: 10px;
+	border-radius: 4px;
+	border: solid black 1px;
+	width: 90%;
+	background-color: #ABBEA9;
 }
-.saladMenu:hover,
-.sandwichMenu:hover,
-.soupMenu:hover,
-.sweetMenu:hover,
-.steakMenu:hover,
-.stewMenu:hover {
+#footer {
+	height: 30px;
+}
+#salad:hover,
+#sandwich:hover,
+#soup:hover,
+#sweet:hover,
+#steak:hover,
+#stew:hover {
 	cursor: pointer;
 }
