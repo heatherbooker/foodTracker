@@ -56,41 +56,57 @@ $(document).ready(function() {
 
     $('#submit').click(function() {
 
+        $('#receipt').empty();
+
+        foodList = "";
+
         $('#receipt').show();
 
         if (hasSalad) {
             $(addFoodCategory('Salad:'));
             var saladChoices = $('#SALAD').val();
-            $(makeFoodList(saladChoices));
+            if (saladChoices) {
+                $(makeFoodList(saladChoices));
+            }
         };
         if (hasSteak) {
             $(addFoodCategory('Steak:'));
             var steakChoices = $('#STEAK').val();
-            $(makeFoodList(steakChoices));
+            if (steakChoices) {
+                $(makeFoodList(steakChoices));
+            }
         };
         if (hasSandwich) {
             $('#receipt').css('height', '400px');
             $(addFoodCategory('Sandwich:'));
             var sandwichChoices = $('#SANDWICH').val();
-            $(makeFoodList(sandwichChoices));
+            if (sandwichChoices) {
+                $(makeFoodList(sandwichChoices));
+            }
         };
         if (hasSoup) {
             $('#receipt').css('height', '530px');
             $(addFoodCategory('Soup:'));
             var soupChoices = $('#SOUP').val();
-            $(makeFoodList(soupChoices));
+            if (soupChoices) {
+                $(makeFoodList(soupChoices));
+            }
         };
         if (hasStew) {
             $('#receipt').css('height', '700px');
             $(addFoodCategory('Stew:'));
             var stewChoices = $('#STEW').val();
-            $(makeFoodList(stewChoices));
+            if (stewChoices) {
+                $(makeFoodList(stewChoices));
+            }
         };
         if (hasSweet) {
             $('#receipt').css('height', '620px');
             $(addFoodCategory('Sweet:'));
             var sweetChoices = $('#SWEET').val();
-            $(makeFoodList(sweetChoices));
+            if (sweetChoices) {
+                $(makeFoodList(sweetChoices));
+            }
         };
         $(printReceipt);
     });
@@ -110,7 +126,6 @@ function addFoodCategory(category) {
 function makeFoodList(arrayOfFoods) {
     var foodChoices = arrayOfFoods.join('<br>');
     foodList += foodChoices;
-    console.log(foodList);
 }
 
 function printReceipt() {
